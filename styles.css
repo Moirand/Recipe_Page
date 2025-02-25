@@ -1,0 +1,162 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YoungSerif';
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format('truetype');
+    font-style: normal;
+}
+
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone100: hsl(30, 54%, 90%);
+    --Stone150: hsl(30, 18%, 87%);
+    --Stone600: hsl(30, 10%, 34%);
+    --Stone900: hsl(24, 5%, 18%);
+    --Brown800: hsl(14, 45%, 36%);
+    --Rose800: hsl(332, 51%, 32%);
+    --Rose50: hsl(330, 100%, 98%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit';
+    font-size: 14px;
+    margin: 0px;
+    color: var(--Stone600);
+    background-color: var(--Stone100);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+h1,
+h2 {
+    font-family: 'YoungSerif';
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--Stone900);
+}
+
+h2 {
+    color: var(--Brown800);
+}
+
+h3 {
+    color: var(--Rose800);
+}
+
+hr {
+    width: 100%;
+    margin: 12px 0;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+
+.card {
+    width: 660px;
+    background-color: var(--White);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+
+    & img {
+        border-radius: 10px;
+    }
+
+    & article {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+section {
+    &.section-highlight {
+        background-color: var(--Rose50);
+        padding: 8px 24px;
+        margin-block: 16px 8px;
+        border-radius: 16px;
+    }
+
+    & ul,
+    ol {
+        padding-inline-start: 20px;
+    }
+
+    & li::marker {
+        color: var(--Brown800);
+        font-weight: 600;
+    }
+
+    & li p {
+        margin-inline: 14px;
+    }
+
+    & table {
+        width: 100%;
+        text-align: left;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+}
+
+th,
+td {
+    padding: 12px 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+th {
+    font-weight: 400;
+    padding-left: 28px;
+}
+
+td {
+    color: var(--Brown800);
+}
+
+tr:last-child td,
+tr:last-child th {
+    border: none;
+}
+
+@media screen and (max-width: 375px) {
+    main {
+        padding: 0px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 0px;
+
+        & img {
+            width: 100%;
+        }
+
+        & article {
+            padding: 0px 30px 30px;
+        }
+    }
+}
