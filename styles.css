@@ -105,6 +105,14 @@ section {
         padding-inline-start: 20px;
     }
 
+    & ul {
+        list-style-type: disc;
+    }
+
+    & ol {
+        list-style-type: decimal;
+    }
+
     & li::marker {
         color: var(--Brown800);
         font-weight: 600;
